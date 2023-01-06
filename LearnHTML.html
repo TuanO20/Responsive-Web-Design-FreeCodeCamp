@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CatPhotoApp</title>
+</head>
+
+
+<body>
+    <main>
+
+        <h1>CatPhotoApp</h1>
+
+        <!--Chia ra theo h2 de quan ly tung section-->
+        <section>
+            <h2>Cat Photos</h2>
+
+            <!--Them target="_blank" de khi click vao se mo trang web sang 1 tab moi-->
+            <p>See more <a target="_blank" href="https://www.freecatphotoapp.com/">cat photos</a> in our gallery.</p>
+
+            <!--Click vao anh se hien link khac-->
+            <a target="_blank" href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+
+        </section>
+
+
+        <h2>Cat Lists<br /></h2>
+
+        <h3>Things cats love:</h3>
+
+        <ul>
+            <li>cat nip</li>
+            <li>laser pointers</li>
+            <li>lasagna</li>
+        </ul>
+
+        <figure>
+            <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg"
+                 alt="A slice of lasagna on a plate.">
+            <figcaption>Cats <em>love</em> lasagna.</figcaption>
+        </figure>
+
+
+        <h3>Top 3 things cats hate:</h3>
+
+        <ol>
+            <li>flea treatment</li>
+            <li>thunder</li>
+            <li>other cats</li>
+
+        </ol>
+
+        <figure>
+            <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+                 alt="Five cats looking around a field." />
+            <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
+        </figure>
+
+        <section>
+            <h2>Cat Form</h2>
+            <!--The action attribute specifies where to send the form-data when a form is submitted.-->
+            <form action="https://freecatphotoapp.com/submit-cat-photo">
+
+                <!--Tạo radio button (lựa chọn đục lỗ tròn)-->
+                <!--Label tag giúp cho khi click vào text thì vẫn chọn được thay vì phải nhấn vào lỗ của button-->
+                <!--name="indoor-outdoor" có tác dụng chỉ cho phép 1 radio button được chọn-->
+                <!--The form data for the button is based on its name and value attributes. Since your radio buttons do not have a value attribute, the form data will include indoor-outdoor=on, which is not useful when you have multiple buttons.
+        For convenience, set the button's value attribute to the same value as its id attribute-->
+                <fieldset>
+                    <legend>Is your cat an indoor or outdoor cat?</legend>
+                    <label>
+                        <!--Thuộc tính Checked ko cần value, mục đích để tick vào ô đó mặc định-->
+                        <input type="radio" id="indoor" name="indoor-outdoor" value="indoor" checked /> Indoor
+                    </label>
+
+                    <label>
+                        <input type="radio" id="outdoor" name="indoor-outdoor" value="outdoor" /> Outdoor
+                    </label>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>What's your cat's persionality?</legend>
+
+                    <!--Checkbox được chọn nhiều options trong khi radio button chỉ chọn được 1 option-->
+                    <label>
+                        <input id="Loving" type="checkbox" name="Personality" value="Loving" checked /> Loving
+                    </label>
+
+                    <label>
+                        <input id="Lazy" type="checkbox" name="Personality" value="Lazy" /> Lazy
+                    </label>
+
+                    <label>
+                        <input id="Energetic" type="checkbox" name="Personality" value="Energetic" /> Energetic
+                    </label>
+
+                </fieldset>
+
+                <!--Taọ một khung để điền thông tin là text-->
+                <input type="text" name="catphotourl" placeholder="cat photo URL" />
+
+                <!--Tạo button submit-->
+                <button type="submit">
+                    Submit
+                </button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>No copyright - <a href="https://www.freecodecamp.org/">freeCodeCamp.org</a></p>
+    </footer>
+</body>
+
+</html>
